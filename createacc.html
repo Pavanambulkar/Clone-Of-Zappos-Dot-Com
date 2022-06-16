@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/createacc.css">
+  <script src="https://kit.fontawesome.com/8ada446efc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>SignUp Form</h2>
+
+    </div>
+    <form action="" id="form" class="form">
+     
+      <div class="form-control">
+        <label for="">Username</label>
+        <input type="text" id="username" placeholder="Enter Your Username" autocomplete="off">
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+      </div>
+      <div class="form-control">
+        <label for="">Email</label>
+        <input type="Email" id="email" placeholder="Enter Your Email" autocomplete="off">
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+      </div>
+      <div class="form-control">
+        <label for="">Phone Number</label>
+        <input type="number" id="phone" placeholder="Enter Your Number" autocomplete="off">
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+      </div>
+      <div class="form-control">
+        <label for="">Password</label>
+        <input type="password" id="password" placeholder="Enter Your Password" autocomplete="off">
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+      </div>
+      <div class="form-control">
+        <label for="">Confirm Password</label>
+        <input type="password" id="cpassword" placeholder="Enter Your Password Again" autocomplete="off">
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+      </div>
+      <input type="submit" name="" class="btn" id=""value="Create Your Zappos Account">
+    </form>
+  </div>
+</body>
+</html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script >
+ const form = document.getElementById("form");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const password = document.getElementById("password");
+const cpassword = document.getElementById("cpassword");
+
+form.addEventListener("submit", (event) =>{
+  event.preventDefault();
+  validate();
+
+})
+const sendData = (sRate, count) =>{
+  if(sRate === count){
+   
+
+
+swal({
+      title: 'Welcome!',
+      text:  "Sign Up Successfull",
+      type: "success"
+  }).then(function(){
+      window.location.href = "login.html";
+  })
+
+}
+ 
+}
+// for final validate
+const successMsg = () =>{
+  let formCon = document.getElementsByClassName('form-control');
+  let count = formCon.length -1;
+  for(let i=0; i<formCon.length; i++){
+    if(formCon[i].className === 'form-control success'){
+      let sRate = 0 + i;
+      console.log(sRate)
+     sendData(sRate, count);
+    }
+    else{
+      return false;
+    }
+  }
+}
+const isEmail = (emailVal) =>{
+  let atSymbol = emailVal.indexOf('@')
+  if(atSymbol <1)return false;
+
+  let dot = emailVal.lastIndexOf('.');
+  if(dot <= atSymbol +3) return false;
+  if(dot === emailVal.length -1) return false
+
+  return true;
+
+}
+
+// define valdate
+const validate = () =>{
+  const usernameVal = username.value.trim();
+  const emailVal = email.value.trim();
+  const phoneVal = phone.value.trim();
+  const passwordVal = password.value.trim();
+  const cpasswordVal = cpassword.value.trim();
+
+  // validate usename 
+  if(usernameVal === ""){
+   setErrorMsg(username, "Username cannot be blank")
+  }
+  else if(usernameVal.length <=2){
+    setErrorMsg(username, "Username min 3 character")
+
+  }
+  else{
+    setSuccessMsg(username);
+  }
+
+  if(emailVal === ""){
+   setErrorMsg(email, "email cannot be blank")
+  }
+  else if(!isEmail(emailVal)){
+    setErrorMsg(emailVal, "Not a valid email")
+
+  }
+  else{
+    setSuccessMsg(email);
+  }
+
+  if(phoneVal === ""){
+   setErrorMsg(phone, "Number cannot be blank")
+  }
+  else if(phoneVal.length != 10){
+    setErrorMsg(phone, "Not a valid Phone Number")
+
+  }
+  else{
+    setSuccessMsg(phone);
+  }
+
+
+  if(passwordVal === ""){
+   setErrorMsg(password, "Password cannot be blank")
+  }
+  else if(passwordVal.length <= 5){
+    setErrorMsg(password, "Minimum 6 Character")
+
+  }
+  else{
+    setSuccessMsg(password);
+  }
+
+  if(cpasswordVal === ""){
+   setErrorMsg(cpassword, "Confirm password cannot be blank")
+  }
+  else if(passwordVal != cpasswordVal){
+    setErrorMsg(cpassword, "Password Not Match")
+
+  }
+  else{
+    setSuccessMsg(cpassword);
+  }
+
+  successMsg();
+}
+
+function setErrorMsg(input, errorMsgs){
+  const formControl = input.parentElement;
+  const small = formControl.querySelector("small");
+  formControl.className = 'form-control error';
+  small.innerText = errorMsgs;
+}
+
+function setSuccessMsg(input){
+  const formControl = input.parentElement;
+  formControl.className = 'form-control success';
+
+}
+
+</script>

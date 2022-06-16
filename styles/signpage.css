@@ -1,0 +1,64 @@
+#sign_div{
+    height: 600px;
+    width: 100%;
+    /* border: 1px solid blue; */
+    
+}
+#sign_div >h1{
+    text-align: center;
+    margin-top: 20px;
+}
+#signpage{
+    height: 80%;
+    width: 60%;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+#signpage > div{
+    /* border: 1px solid teal; */
+    height: 100%;
+    width: 48%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#left_sign{
+    padding-top: 50px;
+}
+#left_sign > button{
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    margin-top: 10px;
+    align-items: center;
+    cursor: pointer;
+    border: 3px solid rgb(0,57,83);
+    color: rgb(0,57,83) ;
+    font-weight: bold;
+}
+#left_sign > button:hover{
+    color: white;
+    background-color: rgb(113, 113, 174);
+}
+#left_sign > h1{
+    text-align: center;
+}
+#left_sign > p{
+    text-align: center;
+    margin-top: 40px;
+}
+#right_sign{
+    padding: 20px;
+}
+strong{
+    font-size: 20px;
+    
+}
+#right_sign  li{
+    text-align: center;
+    margin-top: 20px;
+}

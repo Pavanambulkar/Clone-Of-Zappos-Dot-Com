@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/womens.css">
+    <link rel="stylesheet" href="./styles/index.css">
+<style>
+    #womens_shirt{
+        display: flex;
+    }
+</style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar_main"></div>
+    <div id="sorting">
+      <select name="Sorted" id="sort1" >
+        <option value="rev">Relevance</option>
+        <option value="htl">High To Low</option>
+        <option value="lth">Low To High</option>
+        <option value="rate">Customer Ratings</option>
+        <option value="new">New Arrival</option>
+        <option value="brand">Brand Name</option>
+    </select>
+    </div>
+   
+
+     <div id="womens_shirt">
+       
+     </div>
+    <div id="footer1"></div>
+</body>
+</html>
+
+<script  type="module">
+   import navbar1 from './components/navbar1.js'
+import footer1 from './components/footer1.js'
+import sorting from './components/sorting.js'
+import product from './components/product.js'
+document.getElementById("navbar_main").innerHTML = navbar1();
+document.getElementById("footer1").innerHTML = footer1();
+document.getElementById("sorting").innerHTML = sorting()
+document.getElementById("womens_shirt").innerHTML = product();
+document.getElementById("menu").addEventListener("click", openMenu);
+
+  function openMenu(){
+    document.getElementById("dropdown").classList.toggle("active");
+  }
+
+  document.getElementById("menu1").addEventListener("click", openMenu1);
+  
+  function openMenu1(){
+    document.getElementById("dropdown1").classList.toggle("active");
+  }
+
+  document.getElementById("menu2").addEventListener("click", openMenu2);
+  
+  function openMenu2(){
+    document.getElementById("dropdown2").classList.toggle("active");
+  }
+  
+  document.getElementById("menu3").addEventListener("click", openMenu3);
+  
+  function openMenu3(){
+    document.getElementById("dropdown3").classList.toggle("active");
+  }
+
+
+  function womens_top(i,b,d,r,p,c){
+  this.imageurl = i;
+  this.brand = b;
+  this.desc = d;
+  this.ratings = r;
+  this.price = p;
+  this.cutoff_price= c;
+ 
+}
+
+
+let womens_shirt = [];
+let w1 = new womens_top( "https://m.media-amazon.com/images/I/71oq4d1UQ3L._AC_SR255,340_.jpg",
+    "CeCe",
+     "Short sleves Round Neck Tees",
+     "⭐⭐⭐⭐⭐",
+    50, 55);
+womens_shirt.push(w1)
+
+
+let w2 = new womens_top( "https://m.media-amazon.com/images/I/81I2hM50A8L._AC_SR255,340_.jpg",
+    "Nic+Zoe",
+     "Perfect Layer 3/4 sleves",
+    
+"⭐⭐⭐⭐⭐",55.99, 65.00) ;
+womens_shirt.push(w2)
+
+let w3 = new womens_top(  "https://m.media-amazon.com/images/I/71e5Qmj+zdL._AC_SR255,340_.jpg",
+    "Madewells",
+     "Puff Sleeves Mixed Media Knit Top",
+   
+"⭐⭐⭐⭐⭐",45.99,65.00);
+womens_shirt.push(w3)
+
+let w4 = new womens_top("https://m.media-amazon.com/images/I/81EFawko13L._AC_SR255,340_.jpg",
+    "Henes",
+     "Lily Top",
+     
+"⭐⭐⭐⭐⭐",39.99,49.99);
+womens_shirt.push(w4)
+
+let w5 = new womens_top(  "https://m.media-amazon.com/images/I/61nDXvlWZiL._AC_SR255,340_.jpg",
+    "Alternative",
+     "Step Herm PopoVern In Layers",
+     
+"⭐⭐⭐⭐⭐", 69.95, 74.99,);
+womens_shirt.push(w5)
+
+
+let w6 = new womens_top("https://m.media-amazon.com/images/I/81lM9tJEsML._AC_SR255,340_.jpg",
+    "Armour",
+     "Short-Sleves Relaxed Tee",
+    
+     "⭐⭐⭐⭐⭐",
+    79.95,
+     84.99,);
+     womens_shirt.push(w6)
+
+let w7 = new womens_top( 
+      "https://m.media-amazon.com/images/I/81vvUmdmonL._AC_SR255,340_.jpg",
+    "Madewell",
+     "UA-Tech VNeck Sleves",
+   "⭐⭐⭐",
+    53.99,
+    77.99);
+    womens_shirt.push(w7)
+
+let w8 = new womens_top( "https://m.media-amazon.com/images/I/710ehjlRSeL._AC_SR255,340_.jpg",
+    "Free People",
+     "Plus Size American Badge Of Sports",
+     "⭐⭐⭐",
+     65.00,
+    75.98);
+    womens_shirt.push(w8)
+
+let w9 = new womens_top(  "https://m.media-amazon.com/images/I/81wNdYGAB-L._AC_SR255,340_.jpg",
+    "AberCrombia &Fitch",
+     "Fether Weight Specialy For Women",
+     "⭐⭐⭐⭐⭐",
+     36.98,
+     70.00);
+     womens_shirt.push(w9)
+
+let w10 = new womens_top( 
+      "https://m.media-amazon.com/images/I/71oecDUjA7L._AC_SR255,340_.jpg",
+    "Salty Crew@",
+     "BoyFriend Tee",
+     "⭐⭐",
+     42.50,
+     79.00);
+     womens_shirt.push(w10)
+
+let w11 = new womens_top( "https://m.media-amazon.com/images/I/715Rj4146vL._AC_SR255,340_.jpg",
+    "Free People",
+     "Short Sleeves Two Button Classic Fitness",
+     "⭐⭐⭐⭐⭐",
+     35.60,
+     68.99);
+     womens_shirt.push(w11)
+
+let w12 = new womens_top(   "https://m.media-amazon.com/images/I/91dWJ9FRq6L._AC_SR255,340_.jpg",
+    "Marvel",
+     "Ideal Tee With Perfect Layer",
+    "⭐⭐⭐",
+     34.98,
+     45.00);
+     womens_shirt.push(w12)
+
+let w13 = new womens_top(   "https://m.media-amazon.com/images/I/81q1jEcBRZS._AC_SR255,340_.jpg",
+    "Armour",
+     "Model Tee Blend Racer Tee",
+     "⭐⭐⭐⭐⭐",
+     99.99,
+    112.89);
+    womens_shirt.push(w13)
+
+let w14 = new womens_top(
+      "https://m.media-amazon.com/images/I/81r+IJ6FyBL._AC_SR255,340_.jpg",
+    "Life is Good",
+     "Light Weight Slub Jersy Short Sleeves",
+     "⭐⭐⭐",
+     129.67,
+     150.45);
+     womens_shirt.push(w14)
+
+let w15= new womens_top( "https://m.media-amazon.com/images/I/91crWsr7gJL._AC_SR255,340_.jpg",
+    "Carve Design",
+     "Wisper Cotton V-Neck Tee",
+     "⭐⭐⭐⭐⭐",
+     64.95,
+     69.99);
+     womens_shirt.push(w15)
+
+
+
+let w17 = new womens_top( 
+      "https://m.media-amazon.com/images/I/81EFCTkSdxL._AC_SR255,340_.jpg",
+    "Life is Good",
+     "Women 3/4 Active Tee With Design",
+    "⭐⭐⭐⭐⭐",
+     39.09,
+     69.99);
+     womens_shirt.push(w17)
+
+     function display(womens_shirt){
+      document.getElementById("items").innerHTML = "";
+      womens_shirt.forEach((el,i,arr) =>{
+  let box = document.createElement('div');
+  box.setAttribute("id", "box");
+  box.addEventListener("click", myFunction);
+  function myFunction(){
+    addToCart(el);
+    window.open("womenDetails.html", "_blank")
+  }
+  let image = document.createElement("img");
+  image.setAttribute("class", "img1")
+  image.src = el.imageurl;
+  let brand = document.createElement("h3");
+  brand.innerText = el.brand;
+  let desc = document.createElement("p");
+  desc.innerText = el.desc;
+  let ratings = document.createElement("h2");
+  ratings.innerText = el.ratings;
+  let box2 = document.createElement("div");
+  box2.setAttribute("id", "box2")
+
+  let price = document.createElement("h2");
+  price.innerText = el.price;
+  price.setAttribute("class", "price")
+  let cutoff_price = document.createElement("h2");
+  cutoff_price.setAttribute("class", "cutoff")
+  cutoff_price.innerText = el.cutoff_price;
+  let btn = document.createElement("button");
+  btn.innerText = "Add to Cart";
+  btn.setAttribute("class", "btn");
+  btn.addEventListener("click", function(){
+    SaveToCart(el, i);
+  })
+  box2.append(price, cutoff_price)
+  box.append(image,brand,desc,ratings,box2, btn);
+  document.getElementById("items").append(box);
+
+})
+    }
+
+    display(womens_shirt);
+
+    function SaveToCart(el,i){
+      let index_arr = JSON.parse(localStorage.getItem("items")) || [];
+      index_arr.push(el);
+      localStorage.setItem("items", JSON.stringify(index_arr))
+window.location.href= "mycart.html"    
+    }
+
+  
+
+function addToCart(el){
+  cartData = [];
+  cartData.push(el);
+  localStorage.setItem("cart", JSON.stringify("cartData"))
+}
+let priceFilter = document.querySelector("#sort1");
+priceFilter.addEventListener("change", priceSortFun);
+function priceSortFun(){
+  event.preventDefault();
+  // document.querySelector("#womens_shirt").innerHTML = "";
+   if(priceFilter.value == "rev" ){
+    return display(womens_shirt);
+   }
+   else if(priceFilter.value == "lth"){
+    womens_shirt.sort(function(a,b){
+      return a.price-b.price;
+
+    })
+   }
+   else if(priceFilter.value == "htl"){
+    womens_shirt.sort(function(a,b){
+      return b.price-a.price;
+    })
+   }
+   display(womens_shirt)
+}
+
+// function sort(){
+//   let select = document.getElementById("sort1").value;
+//   function lowTohigh(){
+//     if(select == "htl"){
+//       womens_shirt.sort(function(a,b){
+//         return b.price - a.price;
+//       });
+//       display(womens_shirt);
+//     }
+   
+//   }
+//   lowTohigh();
+//   if(select == "lth"){
+//     womens_shirt.sort(function(a,b){
+//       return a.price - b.price;
+//     });
+//     display(womens_shirt)
+//   }
+// }
+// sort1()
+</script>

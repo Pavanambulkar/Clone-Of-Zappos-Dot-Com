@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/womens.css">
+
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="navbar_main"></div>
+    <div id="sorting">
+      <select name="Sorted" id="sort1" >
+        <option value="rev">Relevance</option>
+        <option value="htl">High To Low</option>
+        <option value="lth">Low To High</option>
+        <option value="rate">Customer Ratings</option>
+        <option value="new">New Arrival</option>
+        <option value="brand">Brand Name</option>
+    </select>
+    </div>
+   
+
+     <div id="womens_prod">
+       
+     </div>
+    <div id="footer1"></div>
+</body>
+</html>
+
+<script  type="module">
+import navbar1 from './components/navbar1.js'
+import footer1 from './components/footer1.js'
+import sorting from './components/sorting.js'
+import product from './components/product.js'
+document.getElementById("navbar_main").innerHTML = navbar1();
+document.getElementById("footer1").innerHTML = footer1();
+document.getElementById("sorting").innerHTML = sorting()
+document.getElementById("womens_prod").innerHTML = product();
+document.getElementById("menu").addEventListener("click", openMenu);
+
+  function openMenu(){
+    document.getElementById("dropdown").classList.toggle("active");
+  }
+
+  document.getElementById("menu1").addEventListener("click", openMenu1);
+  
+  function openMenu1(){
+    document.getElementById("dropdown1").classList.toggle("active");
+  }
+
+  document.getElementById("menu2").addEventListener("click", openMenu2);
+  
+  function openMenu2(){
+    document.getElementById("dropdown2").classList.toggle("active");
+  }
+  
+  document.getElementById("menu3").addEventListener("click", openMenu3);
+  
+  function openMenu3(){
+    document.getElementById("dropdown3").classList.toggle("active");
+  }
+
+
+function womens(i,b,d,r,p,c){
+  this.imageurl = i;
+  this.brand = b;
+  this.desc = d;
+  this.ratings = r;
+  this.price = p;
+  this.cutoff_price= c;
+ 
+}
+
+let womenSneakers = [];
+let w1 = new womens("https://m.media-amazon.com/images/I/719oXoOFoML._AC_UL320_.jpg",
+"Addidas",
+"Damyuan Women's Walking Shoes Tennis Sneakers Casual Lace Up Lightweight Running Shoes",
+"⭐⭐⭐⭐⭐", 31.44, null);
+womenSneakers.push(w1)
+
+let w2 = new womens("https://m.media-amazon.com/images/I/61bBZe-hCrL._AC_UL320_.jpg",
+"Addidas",
+"Skechers Women's D'Lites Memory Foam Lace-up Sneaker",
+"⭐⭐⭐⭐⭐",55.99, 65.00) ;
+womenSneakers.push(w2)
+
+let w3 = new womens( "https://m.media-amazon.com/images/I/71Xj3eDJ0UL._AC_UL320_.jpg",
+"Addidas",
+"adidas Women's Puremotion Adapt Running Shoe",
+"⭐⭐⭐⭐⭐",45.99,65.00);
+womenSneakers.push(w3)
+
+let w4 = new womens("https://m.media-amazon.com/images/I/71gHxcu8r9L._AC_UL320_.jpg",
+"Addidas",
+"Mishansha Women's Running Walking Shoes Breathable Air Cushion Sneakers",
+"⭐⭐⭐⭐⭐",39.99,49.99);
+womenSneakers.push(w4)
+
+let w5 = new womens( "https://m.media-amazon.com/images/I/61alcr5GlXL._AC_UL320_.jpg",
+"Addidas",
+"New Balance Women's 608 V5 Casual Comfort Cross Trainer",
+"⭐⭐⭐⭐⭐", 69.95, 74.99,);
+womenSneakers.push(w5)
+
+
+let w6 = new womens("https://m.media-amazon.com/images/I/71lrB7cklUL._AC_UL320_.jpg",
+     "Addidas",
+     "New Balance Women's Fresh Foam Roav V1 Running Shoe",
+     "⭐⭐⭐⭐⭐",
+    79.95,
+     84.99,);
+     womenSneakers.push(w6)
+
+let w7 = new womens( "https://m.media-amazon.com/images/I/71Ylx0ggGsL._AC_UL320_.jpg",
+     "CeCe",
+   "Women Air Athletic Running Shoes - Air Cushion Shoes for Womens Mesh Sneakers Fashion Tennis Breathable Walking Gym Work Shoes",
+   "⭐⭐⭐",
+    53.99,
+    77.99);
+    womenSneakers.push(w7)
+
+let w8 = new womens( "https://m.media-amazon.com/images/I/71L3ull4CxL._AC_UL320_.jpg",
+     "Sporto",
+    "Skechers Women's Go Walk Joy-15641 Sneaker",
+     "⭐⭐⭐",
+     65.00,
+    75.98);
+    womenSneakers.push(w8)
+
+let w9 = new womens( "https://m.media-amazon.com/images/I/81loxjzrNwL._AC_UL320_.jpg",
+     "PUMA",
+     "PUMA Women's Tazon 6 WN's FM Cross-Trainer Shoe",
+     "⭐⭐⭐⭐⭐",
+     36.98,
+     70.00);
+     womenSneakers.push(w9)
+
+let w10 = new womens( "https://m.media-amazon.com/images/I/7109yUsURpS._AC_UL320_.jpg",
+     "Athelitiie",
+     "Easy Spirit Women's Punter Athletic Shoe",
+     "⭐⭐",
+     42.50,
+     79.00);
+     womenSneakers.push(w10)
+
+let w11 = new womens( "https://m.media-amazon.com/images/I/61Xlmvtw6AL._AC_UL320_.jpg",
+     "Addidas",
+     "STQ Women's Running Shoes Breathable Air Cushion Sneakers",
+     "⭐⭐⭐⭐⭐",
+     35.60,
+     68.99);
+     womenSneakers.push(w11)
+
+let w12 = new womens(  "https://m.media-amazon.com/images/I/61W4ID2z0kS._AC_UL320_.jpg",
+     "PUMA",
+     "Avia Avi-Verge Women’s Sneakers - Workout, Walking, Athletic, Cross Training, Tennis, Gym Shoes for Women",
+    "⭐⭐⭐",
+     34.98,
+     45.00);
+     womenSneakers.push(w12)
+
+let w13 = new womens( "https://m.media-amazon.com/images/I/71kO+HGXsTL._AC_UL320_.jpg",
+     "CeCe",
+     "Nike Women's Air Zoom Pegasus 36 Running Shoes",
+     "⭐⭐⭐⭐⭐",
+     99.99,
+    112.89);
+    womenSneakers.push(w13)
+
+let w14 = new womens("https://m.media-amazon.com/images/I/719mpPkDhUL._AC_UL320_.jpg",
+    "Athelete",
+     "Nike womens Sneaker",
+     "⭐⭐⭐",
+     129.67,
+     150.45);
+     womenSneakers.push(w14)
+
+let w15= new womens( "https://m.media-amazon.com/images/I/71kN6GMBVRL._AC_UL320_.jpg",
+     "Puma",
+     "New Balance Women's 411 V1 Training Shoe",
+     "⭐⭐⭐⭐⭐",
+     64.95,
+     69.99);
+     womenSneakers.push(w15)
+
+
+
+let w17 = new womens( "https://m.media-amazon.com/images/I/514MGkJx+LL._AC_UL320_.jpg",
+     "Addidas",
+     "Akk Womens Athletic Walking Shoes - Slip On Memory Foam Lightweight Work Casual Tennis Running Shoes Sneakers for Indoor Outdoor Gym Travel",
+    "⭐⭐⭐⭐⭐",
+     39.09,
+     69.99);
+     womenSneakers.push(w17)
+
+let w18 = new womens( "https://m.media-amazon.com/images/I/81VDH0lVWWL._AC_UL320_.jpg",
+    "PUMA",
+     "Women's Running Shoes Lightweight Non Slip Breathable Mesh Sneakers Sports Athletic Casual Walking Shoes",
+     "⭐⭐",
+    32.99,
+    35.99);
+    womenSneakers.push(w18)
+
+let w19= new womens( "https://m.media-amazon.com/images/I/71U2yQUwgsL._AC_UL320_.jpg",
+     "Puma",
+    "STQ Women's Athletic Walking Shoes Lightweight Mesh Tennis Sport Sneakers",
+     "⭐⭐⭐⭐⭐",
+    37.89,
+   41.99);
+   womenSneakers.push(w19)
+
+let w20 = new womens( "https://m.media-amazon.com/images/I/71sU3Wt25oL._AC_UL320_.jpg",
+     "PUMA",
+     "PUMA Women's Prowl Slip on Cross Trainer",
+     "⭐⭐⭐",
+     45.45,
+     65.00);
+     womenSneakers.push(w20)
+
+let w21 = new womens(  "https://m.media-amazon.com/images/I/51qelxqgHLL._AC_UL320_.jpg",
+     "Akk",
+     "Akk Womens Walking Tennis Shoes - Slip On Memory Foam Lightweight Casual Sneakers for Gym Travel Work",
+     "⭐⭐⭐⭐⭐",
+     45.99,
+     69.99);
+     womenSneakers.push(w21)
+
+let w22 = new womens( "https://m.media-amazon.com/images/I/91Srx7gtDwL._AC_UL320_.jpg",
+     "PUMA",
+    "Ryka Women's Sky Walking Shoe",
+     "⭐⭐⭐⭐⭐",
+     66.88,
+   79.99);
+   womenSneakers.push(w22)
+
+let w23 = new womens( "https://m.media-amazon.com/images/I/81Dr-1ziJrL._AC_UL320_.jpg",
+     "Nike",
+    "Nike Women's Fitness Shoes",
+    "⭐⭐⭐",
+     78.14,
+     89.19);
+     womenSneakers.push(w23)
+
+let w24 = new womens( "https://m.media-amazon.com/images/I/71n7i10559L._AC_UL320_.jpg",
+     "Addidas",
+     "Mishansha Women's Breathable Sneaker Air Cushion Running Shoes Fashion Sport Gym Jogging Tennis Shoes US 5.5-10.5",
+     "⭐⭐⭐",
+     39.99,
+     41.45);
+     womenSneakers.push(w24)
+
+let w25 = new womens( "https://m.media-amazon.com/images/I/61aarhRpqrL._AC_UL320_.jpg",
+    "PUMA",
+     "Abboos Womens Slip On Sneakers Women Walking Tennis Shoes Lightweight Casual Sneakers for Gym Travel Work",
+     "⭐",
+   33.99,
+     36.99);
+     womenSneakers.push(w25)
+
+let w26 = new womens( "https://m.media-amazon.com/images/I/81uM4xJq7cL._AC_UL320_.jpg",
+    "Adidas",
+    "SKDOIUL Women Running Shoes Athletic Tennis Walking Sneakers",
+     "⭐⭐⭐",
+     39.90,
+    44.55);
+    womenSneakers.push(w26)
+
+let w27 = new womens( "https://m.media-amazon.com/images/I/71a6jbtqMwL._AC_UL320_.jpg",
+    "Puma",
+     "adidas Women's Cloudfoam Pure 2.0 Running Shoes, Black/White/Carbon, 7",
+    "⭐⭐",
+    51.99,
+    70.00);
+    womenSneakers.push(w27)
+
+let w28 = new womens( "https://m.media-amazon.com/images/I/81DoRy8g0WL._AC_UL320_.jpg",
+    "Addidas",
+     "New Balance Women's Fresh Foam X70 V1 Sneaker",
+     "⭐⭐⭐",
+    85.26,
+    89.00);
+    womenSneakers.push(w28);
+
+let w29 = new womens( "https://m.media-amazon.com/images/I/81XVAZglQuL._AC_UL320_.jpg",
+     "CeCe",
+     "Brooks Launch 8",
+   "⭐⭐⭐",
+     99.86,
+    101.00);
+    womenSneakers.push(w29);
+
+    localStorage.setItem("womens", JSON.stringify(womenSneakers));
+    let cartData = JSON.parse(localStorage.getItem("cart"))||[];
+
+
+    function display(womenSneakers){
+      document.getElementById("items").innerHTML = "";
+      womenSneakers.forEach((el,i,arr) =>{
+  let box = document.createElement('div');
+  box.setAttribute("id", "box");
+  box.addEventListener("click", myFunction);
+  function myFunction(){
+    addToCart(el);
+    window.open("womenDetails.html", "_blank")
+  }
+  let image = document.createElement("img");
+  image.setAttribute("class", "img1")
+  image.src = el.imageurl;
+  let brand = document.createElement("h3");
+  brand.innerText = el.brand;
+  let desc = document.createElement("p");
+  desc.innerText = el.desc;
+  let ratings = document.createElement("h2");
+  ratings.innerText = el.ratings;
+  let box2 = document.createElement("div");
+  box2.setAttribute("id", "box2")
+
+  let price = document.createElement("h2");
+  price.innerText = el.price;
+  price.setAttribute("class", "price")
+  let cutoff_price = document.createElement("h2");
+  cutoff_price.setAttribute("class", "cutoff")
+  cutoff_price.innerText = el.cutoff_price;
+  let btn = document.createElement("button");
+  btn.innerText = "Add to Cart";
+  btn.setAttribute("class", "btn");
+  btn.addEventListener("click", function(){
+    SaveToCart(el, i);
+  })
+  box2.append(price, cutoff_price)
+  box.append(image,brand,desc,ratings,box2, btn);
+  document.getElementById("items").append(box);
+
+})
+    }
+
+    display(womenSneakers);
+
+    function SaveToCart(el,i){
+      let index_arr = JSON.parse(localStorage.getItem("items")) || [];
+      index_arr.push(el);
+      localStorage.setItem("items", JSON.stringify(index_arr))
+window.location.href= "mycart.html"    
+    }
+
+  
+function addToCart(el){
+  cartData = [];
+  cartData.push(el);
+  localStorage.setItem("cart", JSON.stringify("cartData"))
+}
+
+
+
+let priceFilter = document.querySelector("#sort1");
+priceFilter.addEventListener("change", priceSortFun);
+function priceSortFun(){
+  event.preventDefault();
+  // document.querySelector("#womens_shirt").innerHTML = "";
+   if(priceFilter.value == "rev" ){
+    return display(womenSneakers);
+   }
+   else if(priceFilter.value == "lth"){
+    womenSneakers.sort(function(a,b){
+      return a.price-b.price;
+
+    })
+   }
+   else if(priceFilter.value == "htl"){
+    womenSneakers.sort(function(a,b){
+      return b.price-a.price;
+    })
+   }
+   display(womenSneakers)
+}
+
+
+</script>

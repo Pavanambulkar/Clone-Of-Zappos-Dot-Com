@@ -1,0 +1,100 @@
+#cart1{
+    height: 300px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+#cart1 h4{
+    margin-left: 20px;
+}
+#vyuv{
+    /* border: 1px solid green; */
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+}
+#vyuv p{
+    margin-top: 30px;
+    font-size: 40px;
+}
+#vyuv i{
+    font-size: 16px;
+}
+#vyuv a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+  margin-left: 40px;
+  cursor: pointer;
+  color:  rgb(52, 47, 47);
+
+   
+}
+#vyuv >img{
+    height: 100px;
+    margin-top: 30px;
+}
+#cart2{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+   }
+  
+   #box{
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 20px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  text-align: center;
+ }
+ #footer1{
+    margin-top: 40px;
+ }
+ #box2{
+display: flex;
+justify-content: space-around;
+}
+.cutoff{
+text-decoration: line-through;
+}
+.price{
+color: red;
+}
+.img1{
+  width: 240px;
+  height: 200px;
+ }
+ .btn{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+ }
+ .btn:hover{
+    background-color: yellowgreen;
+    color: white;
+ }
+ .btn2{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 20px;
+ }
+ .btn2:hover{
+    background-color: yellowgreen;
+    color: white;
+ }
+ #round{
+    display: flex;
+    justify-content: space-around;
+ }

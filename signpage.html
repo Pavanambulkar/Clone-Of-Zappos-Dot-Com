@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/signpage.css">
+
+    <title>Document</title>
+    <style>
+       
+
+    </style>
+</head>
+<body>
+    <div id="navbar_main"></div>
+    <div id="sign_div">
+        <h1>Sign-In &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X </h1>
+        <hr>
+        <div id="signpage">
+            <div id="left_sign">
+                <button onclick="window.location.href ='createacc.html'">SIGN IN WITH ZAPOOS</button> <br>
+                <button onclick="window.location.href ='createacc.html'">SIGN IN WITH AMAZON</button> <br>
+                <button onclick="window.location.href ='createacc.html'">SIGN IN WITH GOOGLE</button> <br>
+                <h1>Or</h1>
+                <button onclick="window.location.href ='createacc.html'">Create Your Zappos Account</button>
+                <p>By signing in, you agree to Zappos <a href="#">Terms and Conditions</a>  and <a href="#">Privacy Policy.</a> </p>
+            </div>
+            <div id="right_sign">
+                <strong>By logging in with Amazon, you may be <br> eligible for additional Prime benefits like <br> FREE Upgraded Shipping. Then, join Zappos  VIP for additional Prime-linked VIP perks:</strong>
+
+                <ul>
+                    <li>
+                        If you are an Amazon Prime Member, sign in with <br> Amazon to
+                        qualify for free upgraded shipping!
+                      </li>
+                      <li>Get FREE Expedited Shipping</li>
+                      <li>Earn 2 Points for Every $1 Spent</li>
+                      <li>Receive Bonus Points on Select Brands</li>
+                      <li>Redeem Points for VIP Codes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer1"></div>
+</body>
+</html>
+<script type="module">
+   import navbar1 from './components/navbar1.js'
+import footer1 from './components/footer1.js'
+
+document.getElementById("navbar_main").innerHTML = navbar1();
+document.getElementById("footer1").innerHTML = footer1();
+document.getElementById("menu").addEventListener("click", openMenu);
+
+function openMenu(){
+  document.getElementById("dropdown").classList.toggle("active");
+}
+
+document.getElementById("menu1").addEventListener("click", openMenu1);
+
+function openMenu1(){
+  document.getElementById("dropdown1").classList.toggle("active");
+}
+
+document.getElementById("menu2").addEventListener("click", openMenu2);
+
+function openMenu2(){
+  document.getElementById("dropdown2").classList.toggle("active");
+}
+
+document.getElementById("menu3").addEventListener("click", openMenu3);
+
+function openMenu3(){
+  document.getElementById("dropdown3").classList.toggle("active");
+}
+</script>

@@ -1,0 +1,77 @@
+#womens_prod{
+    height: auto;
+    width: 100%;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+#price{
+    height: auto;
+    width: 25%;
+    border: 1px solid rebeccapurple;
+    margin-left: 30px;
+}
+#items{
+    height: 100%;
+    width: 70%;
+    border: 1px solid gray;
+}
+#price h3{
+    margin-top: 20px;
+}
+hr{
+margin-top: 30px;
+}
+.under{
+margin-top: 30px;
+}
+#items{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+
+}
+#box{
+/* border: 1px solid red; */
+margin: auto;
+margin-top: 20px;
+height: 400px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+text-align: center;
+}
+.img1{
+width: 240px;
+height: 200px;
+}
+#sort1
+{
+margin-left: 75%;
+height: 40px;
+width: 200px;
+font-size: 15px;
+border-radius: 10px;
+}
+#box2{
+display: flex;
+justify-content: space-around;
+}
+.cutoff{
+text-decoration: line-through;
+}
+.price{
+color: red;
+}
+.btn{
+height: 30px;
+width: 150px;
+border-radius: 10px;
+cursor: pointer;
+margin-top: 20px;
+font-weight: bold;
+font-size: 15px;
+}
+.btn:hover{
+background-color: yellowgreen;
+color: white;
+}

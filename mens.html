@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/womens.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Document</title>
+    <style>
+         #mens_shoes{
+        display: flex;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar_main"></div>
+    <div id="sorting">
+      <select name="Sorted" id="sort1" >
+        <option value="rev">Relevance</option>
+        <option value="htl">High To Low</option>
+        <option value="lth">Low To High</option>
+        <option value="rate">Customer Ratings</option>
+        <option value="new">New Arrival</option>
+        <option value="brand">Brand Name</option>
+    </select>
+    </div>
+   
+
+     <div id="mens_shoes">
+       
+     </div>
+    <div id="footer1"></div>
+</body>
+</html>
+
+<script type="module">
+   import navbar1 from './components/navbar1.js'
+import footer1 from './components/footer1.js'
+import sorting from './components/sorting.js'
+import product from './components/product.js'
+document.getElementById("navbar_main").innerHTML = navbar1();
+document.getElementById("footer1").innerHTML = footer1();
+document.getElementById("sorting").innerHTML = sorting()
+document.getElementById("mens_shoes").innerHTML = product();
+document.getElementById("menu").addEventListener("click", openMenu);
+
+  function openMenu(){
+    document.getElementById("dropdown").classList.toggle("active");
+  }
+
+  document.getElementById("menu1").addEventListener("click", openMenu1);
+  
+  function openMenu1(){
+    document.getElementById("dropdown1").classList.toggle("active");
+  }
+
+  document.getElementById("menu2").addEventListener("click", openMenu2);
+  
+  function openMenu2(){
+    document.getElementById("dropdown2").classList.toggle("active");
+  }
+  
+  document.getElementById("menu3").addEventListener("click", openMenu3);
+  
+  function openMenu3(){
+    document.getElementById("dropdown3").classList.toggle("active");
+  }
+
+  function mens(i,b,d,r,p,c){
+  this.imageurl = i;
+  this.brand = b;
+  this.desc = d;
+  this.ratings = r;
+  this.price = p;
+  this.cutoff_price= c;
+ 
+}
+
+
+  let menSneakers = [];
+let w1 = new mens("https://m.media-amazon.com/images/I/81HW+TX4aBS._AC_SR255,340_.jpg",
+     "CeCe",
+     "Grey Sneakers with comfortable fitting",
+"⭐⭐⭐⭐⭐", 31.44, null);
+menSneakers.push(w1)
+
+let w2 = new mens( "https://m.media-amazon.com/images/I/81ea-zEWy8S._AC_SR255,340_.jpg",
+    "Nic+Zoe",
+     "Perfect Sneakers for mens",
+"⭐⭐⭐⭐⭐",55.99, 65.00) ;
+menSneakers.push(w2)
+
+let w3 = new mens( "https://m.media-amazon.com/images/I/81ea-zEWy8S._AC_SR255,340_.jpg",
+    "Madewells",
+     "Lovelly Pair Shoes",
+"⭐⭐⭐⭐⭐",45.99,65.00);
+menSneakers.push(w3)
+
+let w4 = new mens( "https://m.media-amazon.com/images/I/717A9bjWfOL._AC_SR255,340_.jpg",
+    "Henes",
+     "Hens New Arrived Sneaks",
+"⭐⭐⭐⭐⭐",39.99,49.99);
+menSneakers.push(w4)
+
+let w5 = new mens( "https://m.media-amazon.com/images/I/71g0hxAopKL._AC_SR255,340_.jpg",
+    "Alternative",
+     "Blue Striped Alternative Shoes",
+"⭐⭐⭐⭐⭐", 69.95, 74.99,);
+menSneakers.push(w5)
+
+
+let w6 = new mens( "https://m.media-amazon.com/images/I/71g0hxAopKL._AC_SR255,340_.jpg",
+    "Armour",
+     "Fancy Striped Shoes",
+     "⭐⭐⭐⭐⭐",
+    79.95,
+     84.99,);
+     menSneakers.push(w6)
+
+let w7 = new mens( "https://m.media-amazon.com/images/I/71Ylx0ggGsL._AC_UL320_.jpg",
+     "CeCe",
+   "Women Air Athletic Running Shoes - Air Cushion Shoes for mens Mesh Sneakers Fashion Tennis Breathable Walking Gym Work Shoes",
+   "⭐⭐⭐",
+    53.99,
+    77.99);
+    menSneakers.push(w7)
+
+let w8 = new mens( 
+      "https://m.media-amazon.com/images/I/71XWctpRHzL._AC_SR255,340_.jpg",
+    "Addidas",
+     "Sambha Classic Men's Shoes",
+     "⭐⭐⭐",
+     65.00,
+    75.98);
+    menSneakers.push(w8)
+
+let w9 = new mens( "https://m.media-amazon.com/images/I/813klMTqBgL._AC_SR255,340_.jpg",
+    "Addidas",
+     "Mudial Goals",
+     "⭐⭐⭐⭐⭐",
+     36.98,
+     70.00);
+     menSneakers.push(w9)
+
+let w10 = new mens( 
+      "https://m.media-amazon.com/images/I/71e4W9L0d4L._AC_SR255,340_.jpg",
+    "AberCrombia &Fitch",
+     "Sports Sneakers With Comfortable Fitness",
+     "⭐⭐",
+     42.50,
+     79.00);
+     menSneakers.push(w10)
+
+let w11 = new mens( 
+      "https://m.media-amazon.com/images/I/81J5X64BzaS._AC_SR255,340_.jpg",
+    "Salty Crew@",
+     "Preety Black Sneakers With Stylish Looks",
+     "⭐⭐⭐⭐⭐",
+     35.60,
+     68.99);
+     menSneakers.push(w11)
+
+let w12 = new mens( "https://m.media-amazon.com/images/I/61-q5eulgmL._AC_SR255,340_.jpg",
+    "Levies",
+     "Basketball Shoes With a comfortable Fitness",
+    "⭐⭐⭐",
+     34.98,
+     45.00);
+     menSneakers.push(w12)
+
+let w13 = new mens(  "https://m.media-amazon.com/images/I/71l2V9+DC3L._AC_SR255,340_.jpg",
+    "Armour",
+     "Model Tee Blend Racer Tee",
+     "⭐⭐⭐⭐⭐",
+     99.99,
+    112.89);
+    menSneakers.push(w13)
+
+let w14 = new mens( "https://m.media-amazon.com/images/I/61YpWROdJtL._AC_SR255,340_.jpg",
+    "Free People",
+     "Sports Shoes for men",
+     "⭐⭐⭐",
+     129.67,
+     150.45);
+     menSneakers.push(w14)
+
+let w15= new mens(  "https://m.media-amazon.com/images/I/71Y8k1ilURL._AC_SR768,1024_.jpg",
+    "Life is Good",
+     "Light Weight Sports Shoes With Light Blue Color",
+     "⭐⭐⭐⭐⭐",
+     64.95,
+     69.99);
+     menSneakers.push(w15)
+
+
+
+let w17 = new mens( "https://m.media-amazon.com/images/I/71mIZqzcxcL._AC_SR255,340_.jpg",
+    "Carve Design",
+     "Light Blue Sports Shoes",
+    "⭐⭐⭐⭐⭐",
+     39.09,
+     69.99);
+     menSneakers.push(w17)
+
+let w18 = new mens(  "https://m.media-amazon.com/images/I/714LDN+Q6IL._AC_SR255,340_.jpg",
+    "Life is Good",
+     "Pretty Black Shoes With Red Shoes",
+     "⭐⭐",
+    32.99,
+    35.99);
+    menSneakers.push(w18)
+
+    localStorage.setItem("womens", JSON.stringify(menSneakers));
+    let cartData = JSON.parse(localStorage.getItem("cart"))||[];
+
+
+    function display(menSneakers){
+      document.getElementById("items").innerHTML = "";
+      menSneakers.forEach((el,i,arr) =>{
+  let box = document.createElement('div');
+  box.setAttribute("id", "box");
+  box.addEventListener("click", myFunction);
+  function myFunction(){
+    addToCart(el);
+    window.open("womenDetails.html", "_blank")
+  }
+  let image = document.createElement("img");
+  image.setAttribute("class", "img1")
+  image.src = el.imageurl;
+  let brand = document.createElement("h3");
+  brand.innerText = el.brand;
+  let desc = document.createElement("p");
+  desc.innerText = el.desc;
+  let ratings = document.createElement("h2");
+  ratings.innerText = el.ratings;
+  let box2 = document.createElement("div");
+  box2.setAttribute("id", "box2")
+
+  let price = document.createElement("h2");
+  price.innerText = el.price;
+  price.setAttribute("class", "price")
+  let cutoff_price = document.createElement("h2");
+  cutoff_price.setAttribute("class", "cutoff")
+  cutoff_price.innerText = el.cutoff_price;
+  let btn = document.createElement("button");
+  btn.innerText = "Add to Cart";
+  btn.setAttribute("class", "btn");
+  btn.addEventListener("click", function(){
+    SaveToCart(el, i);
+  })
+  box2.append(price, cutoff_price)
+  box.append(image,brand,desc,ratings,box2, btn);
+  document.getElementById("items").append(box);
+
+})
+    }
+
+    display(menSneakers);
+
+    function SaveToCart(el,i){
+      let index_arr = JSON.parse(localStorage.getItem("items")) || [];
+      index_arr.push(el);
+      localStorage.setItem("items", JSON.stringify(index_arr))
+window.location.href= "mycart.html"    
+    }
+
+ 
+
+function addToCart(el){
+  cartData = [];
+  cartData.push(el);
+  localStorage.setItem("cart", JSON.stringify("cartData"))
+}
+
+
+
+let priceFilter = document.querySelector("#sort1");
+priceFilter.addEventListener("change", priceSortFun);
+function priceSortFun(){
+  event.preventDefault();
+  // document.querySelector("#womens_shirt").innerHTML = "";
+   if(priceFilter.value == "rev" ){
+    return display(menSneakers);
+   }
+   else if(priceFilter.value == "lth"){
+    menSneakers.sort(function(a,b){
+      return a.price-b.price;
+
+    })
+   }
+   else if(priceFilter.value == "htl"){
+    menSneakers.sort(function(a,b){
+      return b.price-a.price;
+    })
+   }
+   display(menSneakers)
+}
+
+
+</script>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/mycart.css">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div id="navbar_main"></div>
+      <div id="cart1">
+        <div id="round">
+            <h4>CONTINUE SHOPPING</h4>
+            <h2 id="cart_total">
+               
+              </h2>
+        </div>
+       
+        <div id="vyuv">
+            <p>My Cart</p>
+            <i>Nothing to see here yet! Sign in to see items that you've previously placed in your Cart or check <br> out all the awesome things you can buy on Zappos.com!</i>
+            <div id="page">
+                <a href="#">Sign In</a>
+                <a href="#">Home Page</a>
+                <a href="#">Brand List</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <!-- <img src="https://www.zappos.com/marty-assets/empty-cart.aa012412a3668eb7151b6731c716a428.svg" alt=""> -->
+           
+        </div>
+            
+        
+      </div>
+      <div id="cart2"></div>
+    <div id="footer1"></div>
+</body>
+</html>
+
+<script  type="module">
+    import navbar1 from './components/navbar1.js'
+import footer1 from './components/footer1.js'
+
+document.getElementById("navbar_main").innerHTML = navbar1();
+document.getElementById("footer1").innerHTML = footer1();
+document.getElementById("menu").addEventListener("click", openMenu);
+
+function openMenu(){
+  document.getElementById("dropdown").classList.toggle("active");
+}
+
+document.getElementById("menu1").addEventListener("click", openMenu1);
+
+function openMenu1(){
+  document.getElementById("dropdown1").classList.toggle("active");
+}
+
+document.getElementById("menu2").addEventListener("click", openMenu2);
+
+function openMenu2(){
+  document.getElementById("dropdown2").classList.toggle("active");
+}
+
+document.getElementById("menu3").addEventListener("click", openMenu3);
+
+function openMenu3(){
+  document.getElementById("dropdown3").classList.toggle("active");
+}
+
+
+let items = JSON.parse(localStorage.getItem("items"));
+
+function getTotal(){
+    let total = document.getElementById("cart_total");
+    let x = 0;
+    let price = items.reduce(function(sum,el,i){
+        return sum + el.price;
+    },0)
+    total.innerHTML = " Cart Total is  :"+price + "  RS Only" ;
+}
+getTotal();
+
+
+items.map(function(el,i){
+    restore();
+    function restore(){
+        let cart = document.getElementById("cart2");
+        let box = document.createElement("div");
+        box.setAttribute("id", "box")
+        let image = document.createElement("img");
+  image.setAttribute("class", "img1")
+  image.src = el.imageurl;
+  let brand = document.createElement("h3");
+  brand.innerText = el.brand;
+  let desc = document.createElement("p");
+  desc.innerText = el.desc;
+  let ratings = document.createElement("h2");
+  ratings.innerText = el.ratings;
+  let box2 = document.createElement("div");
+  box2.setAttribute("id", "box2")
+
+  let price = document.createElement("h2");
+  price.innerText = el.price;
+  price.setAttribute("class", "price")
+  let cutoff_price = document.createElement("h2");
+  cutoff_price.setAttribute("class", "cutoff")
+  cutoff_price.innerText = el.cutoff_price;
+  let btn = document.createElement("button");
+  btn.innerText = "Remove to Cart";
+  btn.setAttribute("class", "btn");
+  btn.addEventListener("click", function(){
+    remove(el, i);
+  })
+  function remove(el, i){
+    items.splice(i,1);
+    localStorage.setItem("items",JSON.stringify(items))            
+                window.location.reload()
+  }
+  let btn2 = document.createElement("button");
+  btn2.innerText = "Buy product";
+  btn2.setAttribute("class", "btn2");
+  btn2.addEventListener("click", function(){
+      buyProduct(el);
+  })
+  box2.append(price, cutoff_price)
+  box.append(image,brand,desc,ratings,box2, btn, btn2);
+  document.getElementById("cart2").append(box);
+    }
+})
+    
+function buyProduct(el){
+  alert("Process is done");
+  window.location.href = "payment.html";
+}
+
+</script>
