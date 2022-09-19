@@ -3,7 +3,7 @@
 Unit-3 Construct Week Project
 
 Zappos is one of the fastest growing online Shopping portals in Asia, offering Shopping an extensive selection of Men, Women and Kids Products to Enjoy every moment and activities of every kind at competitive rates. 
---------------------------------------------------
+
 **Deployment**
 To deploy this project run https://pavanambulkar.github.io/Zappos_web_clone/
 
