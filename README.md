@@ -9,6 +9,11 @@ About this project: This is a Individual project, built by me in the Construct W
 
 ---------------------------------------------------------------------------
 
+### Description
+Zappos.com is an American online shoe and clothing retailer based in Las Vegas, Nevada, United States. The company was founded in 1999 by Nick Swinmurn and launched under the domain name Shoesite.com. In July 2009, Amazon acquired Zappos in an all-stock deal worth around $1.2 billion at the time.
+
+---------------------------------------------------------------------------
+
 **Deployment**
 To deploy this project run https://pavanambulkar.github.io/Zappos_web_clone/
 
