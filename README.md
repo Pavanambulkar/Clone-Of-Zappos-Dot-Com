@@ -15,8 +15,7 @@ Zappos.com is an American online shoe and clothing retailer based in Las Vegas, 
 ---------------------------------------------------------------------------
 
 **Deployment**
-To deploy this project run https://pavanambulkar.github.io/Zappos_web_clone/
-
+To deploy this project run https://pavanambulkar.github.io/Clone-Of-Zappos-Dot-Com/
 ---------------------------------------------------------------------------
 
 
